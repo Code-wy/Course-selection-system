@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>详情页</title>
+    <link rel="stylesheet" th:href="@{../../lib/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{../../lib/font/css/font-awesome.min.css}"/>
+    <link rel="stylesheet" th:href="@{../../css/seckill_item.css}"/>
+    <link rel="stylesheet" th:href="@{../../css/public.css}"/>
+</head>
+<body>
+
+
+<div id="app">
+    <!-- header -->
+    <div th:replace="public/header :: header"></div>
+
+    <!-- main -->
+    <div id="main">
+        <div>
+            <div class="container">
+                <div class="container">
+                    <div class="fl preview-wrap">
+                        <div id="preview" class="spec-preview">
+                            <span class="jqzoom"><img th:src="${seckill.image}" alt=""/></span>
+                        </div>
+                    </div>
+
+                    <div class="fr itemInfo-wrap">
+                        <div class="sku-name">
+                            <h3 th:text="${seckill.title}"></h3>
+                        </div>
+                        <div class="summary-2">
+                            <div class="summary-wrap news">
+                                <span><img th:src="@{../../lib/font/icon/clock.png}"/>校园选课</span>
+                            </div>
+                        </div>
+                        <div class="summary">
+
+                            <div class="summary-wrap">
+                                <div class="fl remark">
+                                    授课老师：<b th:text="${seckill.teacher}"></b>
+                                </div>
+                                <div class="fr remark">
+                                    课程剩余人数：<b th:text="${seckill.stockCount}"></b>
+                                </div>
+                            </div>
+                            <div class="summary-wrap news">
+                                <span><img th:src="@{../../lib/font/icon/clock.png}"/>
+                                    选课开始时间：[[${#dates.format(seckill.startTime, 'yyyy-MM-dd HH:mm:ss')}]]
+                                </span>
+                            </div>
+                            <div class="summary-wrap news">
+                                <span><img th:src="@{../../lib/font/icon/clock.png}"/>
+                                    选课结束时间：[[${#dates.format(seckill.endTime, 'yyyy-MM-dd HH:mm:ss')}]]
+                                </span>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="text-center">
+                            <div style="color: #ff0000d9;">
+                                <h2>
+                                    <span id="seckill-time-span"></span>
+                                    <br/>
+                                    <br/>
+                                    <span id="seckill-box"></span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--登录弹出层 输入学号-->
+    <div id="killPhoneModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title text-center">
+                        <span> </span>输入学号开始选课:
+                    </h3>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-8 col-xs-offset-2">
+                            <input type="text" name="killPhone" id="killPhoneKey"
+                                   placeholder="请输入您的学号" class="form-control">
+                        </div>
+                    </div>
+                    <span style="color: red;float:left;font-size: 13px;">学号为十位数字</span>
+                </div>
+                <div class="modal-footer">
+                    <!--验证信息-->
+                    <span id="killPhoneMessage" style="margin-right: 40%;"></span>
+                    <button type="button" id="killPhoneBtn" class="btn btn-success">
+                        提交
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div th:replace="public/footer :: footer"></div>
+
+</div>
+
+</body>
+<script type="text/javascript" th:src="@{../../lib/jquery-3.3.1.min.js}"></script>
+<script type="text/javascript" th:src="@{../../lib/jquery.cookie.js}"></script>
+<script type="text/javascript" th:src="@{../../lib/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{../../lib/countdown.js}"></script>
+<script type="text/javascript" th:src="@{../../js/seckill_detail.js}"></script>
+<script type="text/javascript" th:inline="javascript">
+    $(function () {
+        //使用表达式传入参数
+        seckill.detail.init({
+            seckillId: [[${seckill.seckillId}]],
+            startTime: [[${seckill.startTime.time}]],//毫秒
+            endTime: [[${seckill.endTime.time}]],
+            // money: [[${0}]] //秒杀价钱
+        });
+    });
+</script>
+</html>
