@@ -12,13 +12,11 @@
 
 ## **启动说明**
 
-* 启动前，请配置好 [application.yml](https://github.com/TyCoding/springboot-seckill/blob/master/src/main/resources/application.yml) 中连接数据库的用户名和密码，以及Redis服务器的地址和端口信息。
-
-* 启动前，请创建数据库`seckill`，建表SQL语句放在：[/db/sys_schema.sql](https://github.com/TyCoding/springboot-seckill/blob/master/db/sys_schema.sql)。具体的建表和建库语句请仔细看SQL文件。
-
-* 配置完成后，运行位于 `src/main/cn/tycoding/`下的SpringbootSeckillApplication中的main方法，访问 `http://localhost:8080/seckill/` 进行API测试。
-
-* 注意[/db/sys_data.sql](https://github.com/TyCoding/springboot-seckill/blob/master/db/sys_data.sql)中的日期可能要修改。
+* 启动前，请配置好 [application.yml](https://github.com/Code-wy/Course-selection-system/blob/master/src/main/resources/application.yml) 中连接数据库的用户名和密码，以及Redis服务器的地址和端口信息。
+* 启动前，请创建数据库`seckill`，建表SQL语句放在：[/db/sys_schema.sql](https://github.com/Code-wy/Course-selection-system/blob/master/db/sys_schema.sql)。具体的建表和建库语句请仔细看SQL文件。
+* 启动项目前需要提前向数据库插入一些数据：[/db/sys_data.sql](https://github.com/Code-wy/Course-selection-system/blob/master/db/sys_data.sql)
+* 配置完成后，运行位于 `src/main/cn/codewy/`下的SpringbootSeckillApplication中的main方法，访问 `http://localhost:8080/seckill/` 进行测试。
+* 注意[/db/sys_data.sql](https://github.com/Code-wy/Course-selection-system/blob/master/db/sys_data.sql)中的日期可能要修改。
 
 
 
@@ -36,7 +34,7 @@
     ├── main
     │   ├── java
     │   │   └── cn
-    │   │       └── tycoding
+    │   │       └── codewy
     │   │           ├── SpringbootSeckillApplication.java  -- SpringBoot启动器
     │   │           ├── controller  -- MVC的web层
     │   │           ├── dto  -- 统一封装的一些结果属性，和entity类似
@@ -66,8 +64,8 @@
 
 ## Preview
 
-![系统首页](.\README\001.PNG)
+![系统首页](README\001.PNG)
 
-![输入学号选课](.\README\002.PNG)
+![输入学号选课](README\002.PNG)
 
-![选课成功](.\README\003.PNG)
+![选课成功](README\003.PNG)
