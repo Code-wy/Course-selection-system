@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="cn.tycoding.mapper.SeckillMapper">
+<mapper namespace="cn.codewy.mapper.SeckillMapper">
 
     <select id="findAll" resultType="Seckill">
         SELECT * FROM seckill

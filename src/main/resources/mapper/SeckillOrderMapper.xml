@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="cn.tycoding.mapper.SeckillOrderMapper">
+<mapper namespace="cn.codewy.mapper.SeckillOrderMapper">
 
     <!-- 插入清单明细。如果主键冲突会直接报错，可使用`ignore`实现主键冲突就直接返回0，表示更新失败 -->
     <insert id="insertOrder">
