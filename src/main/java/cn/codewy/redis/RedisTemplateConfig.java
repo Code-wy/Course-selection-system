@@ -1,4 +1,4 @@
-package cn.tycoding.redis;
+package cn.codewy.redis;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;

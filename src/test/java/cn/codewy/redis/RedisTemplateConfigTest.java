@@ -1,4 +1,4 @@
-package cn.tycoding.redis;
+package cn.codewy.redis;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

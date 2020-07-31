@@ -1,11 +1,11 @@
-package cn.tycoding.service.impl;
+package cn.codewy.service.impl;
 
-import cn.tycoding.dto.Exposer;
-import cn.tycoding.dto.SeckillExecution;
-import cn.tycoding.entity.Seckill;
-import cn.tycoding.exception.RepeatKillException;
-import cn.tycoding.exception.SeckillCloseException;
-import cn.tycoding.service.SeckillService;
+import cn.codewy.dto.Exposer;
+import cn.codewy.dto.SeckillExecution;
+import cn.codewy.entity.Seckill;
+import cn.codewy.exception.RepeatKillException;
+import cn.codewy.exception.SeckillCloseException;
+import cn.codewy.service.SeckillService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;

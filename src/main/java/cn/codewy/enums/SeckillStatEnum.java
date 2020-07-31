@@ -1,4 +1,4 @@
-package cn.tycoding.enums;
+package cn.codewy.enums;
 
 /**
  * @auther CodeWy

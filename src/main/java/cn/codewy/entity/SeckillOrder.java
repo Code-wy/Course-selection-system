@@ -1,4 +1,4 @@
-package cn.tycoding.entity;
+package cn.codewy.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;

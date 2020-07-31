@@ -1,4 +1,4 @@
-package cn.tycoding;
+package cn.codewy;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
