@@ -66,4 +66,8 @@
 
 ## Preview
 
+![系统首页](.\README\001.PNG)
 
+![输入学号选课](.\README\002.PNG)
+
+![选课成功](.\README\003.PNG)
